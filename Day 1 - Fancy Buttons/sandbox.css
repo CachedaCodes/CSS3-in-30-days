@@ -180,6 +180,46 @@
    GRADIENT BORDERED BUTTONS
    ========================= */
 
+.gradient-button-1 {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  background-color: #e7eef1;
+  border: solid 10px transparent;
+  border-image: linear-gradient(to top right, orangered, yellow);
+  border-image-slice: 1;
+  color: orangered;
+  transition: all 0.3s ease;
+}
+
+  .gradient-button-1:hover {
+    background-image: linear-gradient(to top right, orangered, yellow);
+    color: white;
+  }
+
+.gradient-button-2 {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  background-color: #e7eef1;
+  border: solid 4px transparent;
+  border-image: linear-gradient(to right, orangered, transparent);
+  border-image-slice: 1;
+  color: orangered;
+  transition: all 0.3s ease;
+}
+
+  .gradient-button-2:hover {
+    background-image: linear-gradient(to right, orangered, transparent);
+    border-right: none;
+    color: white;
+  }
 
 
 /* =========================
