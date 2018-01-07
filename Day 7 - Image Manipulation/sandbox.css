@@ -1,5 +1,48 @@
-/* ========================================
+.sandbox img {
+  -webkit-transition: all ease 0.3s;
+  transition:         all ease 0.3s;
+}
 
-    CODE YOUR STYLES BELOW!
+  .sandbox img:hover {
+    cursor: crosshair;
+  }
 
-   ====================================== */
+.grayscale {
+  -webkit-filter: grayscale(1);
+  filter:         grayscale(1);
+}
+
+  .grayscale:hover {
+    -webkit-filter: grayscale(0);
+    filter:         grayscale(0);
+  }
+
+.blur {
+  -webkit-filter: blur(2px);
+  filter:         blur(2px);
+}
+
+  .blur:hover {
+    -webkit-filter: blur(0);
+    filter:         blur(0);
+  }
+
+.invert {
+  -webkit-filter: invert(1);
+  filter:         invert(1);
+}
+
+  .invert:hover {
+    -webkit-filter: invert(0);
+    filter:         invert(0);
+  }
+
+.sepia {
+  -webkit-filter: sepia(1);
+  filter:         sepia(1);
+}
+
+  .sepia:hover {
+    -webkit-filter: sepia(0);
+    filter:         sepia(0);
+  }
