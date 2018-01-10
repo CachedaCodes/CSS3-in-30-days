@@ -1,5 +1,100 @@
-/* ========================================
+/* MODERN LAYOUT #1 */
 
-    CODE YOUR STYLES BELOW!
+.layout1 article {
+  width: 58%;
+  float: left;
+}
 
-   ====================================== */
+.layout1 aside {
+  width: 40%;
+  float: right;
+}
+
+.layout1 footer {
+  clear: both;
+}
+
+/* MODERN LAYOUT #2 */
+
+.layout2 header .logo {
+  width: 20%;
+  float: left;
+  margin: 0;
+}
+
+.layout2 header nav {
+  width: 78%;
+  float: right;
+  margin: 0;
+}
+
+/* fix to avoid the collapse */
+
+.layout2 header::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+/* OR
+.layout header {
+  overflow: hidden;
+}
+*/
+
+.layout2 article {
+  width: 50%;
+  margin-left: 2%;
+  float: left;
+}
+
+.layout2 aside.sidenav {
+  width: 23%;
+  float: left;
+}
+
+.layout2 aside.sidebar {
+  width: 23%;
+  float: right;
+}
+
+.layout2 footer {
+  clear: both;
+}
+
+/* MODERN LAYOUT #3 */
+
+.layout3 header .logo {
+  width: 20%;
+  float: right;
+  margin: 0;
+}
+
+.layout3 header nav {
+  width: 78%;
+  float: left;
+  margin: 0;
+}
+
+.layout3 header::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.layout3 article {
+  width: 32%;
+  float: left;
+  margin: 0 2% 0 0;
+}
+
+/* clear the margin from the last article so it fitst in the layout */
+
+.layout3 article:last-child {
+  margin: 0;
+}
+
+.layout3 .articles::after {
+  display: table;
+  content: "";
+  clear: both;
+}
