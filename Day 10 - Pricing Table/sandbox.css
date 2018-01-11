@@ -1,11 +1,132 @@
-/* ========================================
+.pricing-table {
+  margin: 60px auto;
+}
 
-    CODE YOUR STYLES BELOW!
+  .pricing-table::after {
+    display: table;
+    content: "";
+    clear: both;
+  }
 
-   ====================================== */
+.pricing-table > div {
+  display: block;
+  float: left;
+  width: 48%;
+  min-height: 1px;
+  background-color: white;
+  color: #555;
+}
 
+.pricing-table > div:not(:last-child) {
+  margin-right: 2%;
+}
 
+.pricing-block {
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
 
+.pricing-header {
+  height: auto;
+  padding: 30px 20px 40px;
+  text-transform: uppercase;
+}
 
+.pricing-header .pricing-heading {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
 
+.pricing-price {
+  color: #777;
+}
 
+.pricing-price > span{
+  display: inline-block;
+}
+
+.pricing-price__currency {
+  margin-top: 10px;
+  vertical-align: top;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.pricing-price__value {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.pricing-price__duration {
+  margin-top: 10px;
+  vertical-align: top;
+  font-size: 1.4rem;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.pricing-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pricing-body ul li {
+  display: block;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.pricing-body ul li:nth-child(2n) {
+  background-color: #fff;
+}
+
+.pricing-body ul li:nth-child(2n+1) {
+  background-color: #f8f8f8;
+}
+
+.pricing-footer {
+  padding: 40px 0 0;
+}
+
+.pricing-button,
+.pricing-button:link,
+.pricing-button:visited {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #333;
+  color: white;
+}
+
+/* POPULAR OPTION */
+.pricing-popular {
+  margin-top: -20px;
+}
+
+.pricing-popular .pricing-header {
+  padding-top: 50px;
+}
+
+.pricing-popular .pricing-footer {
+  padding-top: 60px;
+}
+
+.pricing-popular .pricing-price {
+  color: #ff8888;
+}
+
+.pricing-popular .pricing-button {
+  background-color: #ff8888;
+  color: white;
+}
+
+.pricing-popular .pricing-button:hover {
+  background-color: #333;
+  color: #ff8888;
+}
