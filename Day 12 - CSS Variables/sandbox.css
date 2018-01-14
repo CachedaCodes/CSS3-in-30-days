@@ -1,5 +1,23 @@
-/* ========================================
+.sandbox {
+  --primary-color: orangered;
+  --secondary-color: hotpink;
+  --base-measurement: 20px;
+}
 
-    CODE YOUR STYLES BELOW!
+.sandbox .box {
+  --text-color: #f3f3f3;
 
-   ====================================== */
+  text-align: center;
+  color:       var(--text-color);
+  background:  var(--primary-color);
+
+  margin:      var(--base-measurement);
+
+  height:      calc(var(--base-measurement) * 10);
+  width:       calc(var(--base-measurement) * 10);
+  line-height: calc(var(--base-measurement) * 10);
+}
+
+.sandbox .box2 {
+  background:   var(--secondary-color)
+}
