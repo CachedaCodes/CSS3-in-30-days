@@ -26,14 +26,14 @@
       opacity: 0;
       -webkit-transform: scale(0.5);
               transform: scale(0.5);
-      -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
-      transition: transform 0.5s ease, opacity 0.5s ease;
     }
     input[type="checkbox"]:checked ~ .final__overlay {
       pointer-events: auto;
       opacity: 1;
       -webkit-transform: scale(1);
               transform: scale(1);
+      -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
+              transition: transform 0.5s ease, opacity 0.5s ease;
     }
     .final__modal {
       position: fixed;
@@ -46,15 +46,15 @@
       max-width: 640px;
       pointer-events: none;
       opacity: 0;
-      -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
-      transition: transform 0.5s ease, opacity 0.5s ease;
-      transition-delay: 0.1s;
     }
     input[type="checkbox"]:checked ~ .final__modal {
       pointer-events: auto;
       opacity: 1;
       -webkit-transform: translate(-50%, -50%) scale(1);
               transform: translate(-50%, -50%) scale(1);
+      -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
+              transition: transform 0.5s ease, opacity 0.5s ease;
+      transition-delay: 0.1s;
     }
     .final__modal__content {
       display: block;
