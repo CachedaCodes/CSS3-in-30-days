@@ -29,7 +29,7 @@
     }
     input[type="checkbox"]:checked ~ .final__overlay {
       pointer-events: auto;
-      opacity: 1;
+      opacity: 1 !important;
       -webkit-transform: scale(1);
               transform: scale(1);
       -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
@@ -49,7 +49,7 @@
     }
     input[type="checkbox"]:checked ~ .final__modal {
       pointer-events: auto;
-      opacity: 1;
+      opacity: 1 !important;
       -webkit-transform: translate(-50%, -50%) scale(1);
               transform: translate(-50%, -50%) scale(1);
       -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
