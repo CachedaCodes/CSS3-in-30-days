@@ -70,7 +70,20 @@
                blinky linear 0.5s infinite;
 }
 
-  
+  .ghost::before, .ghost::after {
+    content: "";
+    position: absolute;
+    background: white;
+    height: 25px;
+    width: 20px;
+    border-radius: 100%;
+    top: 15px;
+    left: 4px;
+  }
+
+  .ghost::after {
+    left: 28px;
+  }
 
 .eyes::before, .eyes::after {
   content: "";
