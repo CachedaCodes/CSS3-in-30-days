@@ -1,5 +1,108 @@
-/* ========================================
+/* TOOLTIP */
 
-    CODE YOUR STYLES BELOW!
+.tooltip {
+  position: relative;
+  height: 60px;
+  width: 250px;
+  background: #f2395a;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  font-size: 18px;
+  margin: 0 auto;
+}
 
-   ====================================== */
+  .tooltip::before {
+    position: absolute;
+    z-index: 2;
+
+    display: none;
+    width: 200px;
+    padding: 10px;
+    font-size: 0.8em;
+    line-height: 1.4em;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    content: attr(title);
+  }
+
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+
+    display: none;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+  }
+
+    .tooltip:hover::before,
+    .tooltip:hover::after {
+        display: inline-block;
+    }
+
+/* TOOLTIP TOP */
+
+  .tooltip.top::before {
+    bottom: calc(100% + 7px); /* 100% + afterBorderTopSize + afterBorderBottomSize */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .tooltip.top::after {
+    bottom: 100%;
+    left: 50%;
+    border-bottom-width: 2px;
+    border-top-color: rgba(0,0,0,0.8);
+    transform: translateX(-50%);
+  }
+
+/* TOOLTIP RIGHT */
+
+  .tooltip.right::before {
+    top: 50%;
+    left: calc(100% + 7px); /* 100% + afterBorderRightSize + afterBorderLeftSize */
+    transform: translateY(-50%);
+  }
+
+  .tooltip.right::after {
+    top: 50%;
+    left: 100%;
+    border-left-width: 2px;
+    border-right-color: rgba(0,0,0,0.8);
+    transform: translateY(-50%);
+  }
+
+/* TOOLTIP BOTTOM */
+
+  .tooltip.bottom::before {
+    top: calc(100% + 7px); /* 100% + afterBorderBottomSize + afterBorderTopSize */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .tooltip.bottom::after {
+    top: 100%;
+    left: 50%;
+    border-top-width: 2px;
+    border-bottom-color: rgba(0,0,0,0.8);
+    transform: translateX(-50%);
+  }
+
+/* TOOLTIP LEFT */
+
+  .tooltip.left::before {
+    top: 50%;
+    right: calc(100% + 7px); /* 100% + afterBorderLeftSize + afterBorderRightSize */
+    transform: translateY(-50%);
+  }
+
+  .tooltip.left::after {
+    top: 50%;
+    right: 100%;
+    border-right-width: 2px;
+    border-left-color: rgba(0,0,0,0.8);
+    transform: translateY(-50%);
+  }
