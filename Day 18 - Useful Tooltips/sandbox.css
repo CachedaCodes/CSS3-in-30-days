@@ -16,7 +16,8 @@
     position: absolute;
     z-index: 2;
 
-    display: none;
+    display: inline-block;
+    opacity: 0;
     width: 200px;
     padding: 10px;
     font-size: 0.8em;
@@ -25,6 +26,8 @@
     background-color: rgba(0,0,0,0.8);
     color: white;
     content: attr(title);
+
+    transition: opacity 0.5s ease-in-out;
   }
 
   .tooltip::after {
@@ -32,15 +35,19 @@
     position: absolute;
     z-index: 1;
 
-    display: none;
+    display: inline-block;
+    opacity: 0;
     width: 0;
     height: 0;
     border: 5px solid transparent;
+
+    transition: opacity 0.5s ease-in-out;
   }
 
     .tooltip:hover::before,
     .tooltip:hover::after {
-        display: inline-block;
+      opacity: 1;
+
     }
 
 /* TOOLTIP TOP */
