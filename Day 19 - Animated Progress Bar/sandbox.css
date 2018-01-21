@@ -1,5 +1,61 @@
-/* ========================================
+/* PROGRESSION BAR 1 */
 
-    CODE YOUR STYLES BELOW!
+.animation-bar-1 {
+  position: relative;
+  display: block;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 30px;
+  background: rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.25),
+                    0 1px rgba(255,255,255,0.8);
+}
 
-   ====================================== */
+  .animation-bar-1 span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+    background-color: #f56982;
+    background-size: 100%;
+    background-image: linear-gradient(to bottom, #f2395e, #b90c2b);
+
+    animation: progress-bar-1 ease 7s infinite;
+  }
+
+    .animation-bar-1 span::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-size: 100%;
+      background-image: linear-gradient(45deg, white 25%,
+                                        rgba(0,0,0,0) 25%,
+                                        rgba(0,0,0,0) 50%,
+                                        white 50%,
+                                        white 75%,
+                                        rgba(0,0,0,0) 75%,
+                                        rgba(0,0,0,0));
+      background-size: 30px 30px;
+      opacity: 0.3;
+      animation: progress-bar-after-1 linear 0.5s infinite
+    }
+
+
+/* KEYFRAMES */
+
+@keyframes progress-bar-1 {
+  0% {width: 0%;}
+  100% {width: 60%}
+}
+
+@keyframes progress-bar-after-1 {
+  0% {background-position: 0 100%;}
+  100% {background-position: 30px 100%;}
+}
