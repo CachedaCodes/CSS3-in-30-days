@@ -1,5 +1,41 @@
-/* ========================================
+/* SPINNER 1 */
 
-    CODE YOUR STYLES BELOW!
+.spinner-1 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
 
-   ====================================== */
+  .spinner-1::before {
+    content: "";
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    color: #323b40;
+
+    box-shadow: inset -5px 0 0 5px currentColor;
+    clip: rect(0, 64px, 32px, 0);
+
+    animation: rotator linear 1s infinite
+  }
+
+
+/* KEYFRAMES */
+
+@keyframes rotator {
+  0% {
+    transform: rotate(-180deg);
+    box-shadow: inset -5px 0 0 5px currentColor;
+  }
+  50% {
+    box-shadow: inset -1px 0 0 1px currentColor;
+  }
+  100% {
+    transform: rotate(180deg);
+    box-shadow: inset -5px 0 0 5px currentColor;
+  }
+}
