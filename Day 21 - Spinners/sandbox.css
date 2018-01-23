@@ -61,6 +61,37 @@
     animation: orbit-2 linear 1s infinite;
   }
 
+/* SPINNER 3 */
+
+.spinner-3 {
+  display: inline-block;
+  margin: 40px 40px;
+}
+
+  .spinner-3::before,
+  .spinner-3::after {
+    content: "";
+    position: absolute;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    background-color: #323b40;
+  }
+
+  .spinner-3::before {
+    transform: translateX(-120%);
+    transform-origin: 32px 50%;
+
+    animation: orbit-3 linear 1s infinite;
+  }
+
+  .spinner-3::after {
+    transform: translateX(120%);
+    transform-origin: -16px 50%;
+
+    animation: orbit-3 linear 1s infinite;
+  }
 
 /* KEYFRAMES */
 
@@ -101,6 +132,18 @@
     transform: translateX(120%) rotate(0deg);
   }
   70% {
+    transform: translateX(120%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(120%) rotate(-180deg);
+  }
+}
+
+@keyframes orbit-3 {
+  0% {
+    transform: translateX(120%) rotate(180deg);
+  }
+  50% {
     transform: translateX(120%) rotate(0deg);
   }
   100% {
