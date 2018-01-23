@@ -23,6 +23,44 @@
     animation: rotator linear 1s infinite
   }
 
+/* SPINNER 2 */
+
+.spinner-2 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #323b40;
+  margin: 32px;
+}
+
+  .spinner-2::before,
+  .spinner-2::after {
+    content: "";
+    position: absolute;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    background-color: inherit;
+  }
+
+  .spinner-2::before {
+    transform: translateX(-120%);
+    transform-origin: 32px 50%;
+
+    animation: orbit-1 linear 1s infinite;
+  }
+
+  .spinner-2::after {
+    transform: translateX(120%);
+    transform-origin: -16px 50%;
+
+    animation: orbit-2 linear 1s infinite;
+  }
+
 
 /* KEYFRAMES */
 
@@ -37,5 +75,35 @@
   100% {
     transform: rotate(180deg);
     box-shadow: inset -5px 0 0 5px currentColor;
+  }
+}
+
+@keyframes orbit-1 {
+  0% {
+    transform: translateX(-120%) rotate(180deg);
+  }
+  30% {
+    transform: translateX(-120%) rotate(0deg);
+  }
+  70% {
+    transform: translateX(-120%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-120%) rotate(-180deg);
+  }
+}
+
+@keyframes orbit-2 {
+  0% {
+    transform: translateX(120%) rotate(180deg);
+  }
+  30% {
+    transform: translateX(120%) rotate(0deg);
+  }
+  70% {
+    transform: translateX(120%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(120%) rotate(-180deg);
   }
 }
