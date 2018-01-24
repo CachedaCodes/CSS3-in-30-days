@@ -1,5 +1,66 @@
-/* ========================================
+/* LAYOUT 1 */
 
-    CODE YOUR STYLES BELOW!
+.layout1 main {
+  display: flex;
+  flex-direction: row;
+}
 
-   ====================================== */
+.layout1 article {
+  flex: 1 58%;
+  margin-right: 2%;
+}
+
+/* LAYOUT 2 */
+
+.layout2 header {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout2 header nav {
+  flex: 1;
+  margin-left: 2%;
+}
+
+.layout2 main {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout2 article {
+  flex: 1 56%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+.layout2 aside.sidenav,
+.layout2 aside.sidebar {
+  flex: 1 20%;
+}
+
+/* LAYOUT 3 */
+
+.layout3 header {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.layout3 header nav {
+  flex: 1;
+  margin-right: 2%;
+}
+
+.layout3 .articles {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout3 article {
+  flex: 1;
+  margin: 0 2%;
+}
+
+  .layout3 article:first-child,
+  .layout3 article:last-child {
+    margin: 0;
+  }
