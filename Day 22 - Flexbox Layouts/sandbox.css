@@ -64,3 +64,30 @@
   .layout3 article:last-child {
     margin: 0;
   }
+
+/* RESPONSIVE FALLBACK */
+
+@media screen and (max-width: 768px) {
+  .layout1 main,
+  .layout1 article,
+  .layout1 aside,
+  .layout2 header,
+  .layout2 header .logo,
+  .layout2 header nav,
+  .layout2 main,
+  .layout2 article,
+  .layout2 aside.sidenav,
+  .layout2 aside.sidebar,
+  .layout3 main,
+  .layout3 .articles,
+  .layout3 article,
+  .layout3 aside,
+  .layout3 header,
+  .layout3 header .logo,
+  .layout3 header nav {
+    display: block;
+    float: none;
+    width: 100%;
+    margin: 0 0 2%;
+  }
+}
