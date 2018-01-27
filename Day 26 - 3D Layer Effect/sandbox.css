@@ -1,5 +1,51 @@
-/* ========================================
+.layers {
+  position: relative;
+  min-height: 640px;
+  max-width: 360px;
+}
 
-    CODE YOUR STYLES BELOW!
+.layers img {
+  position: absolute;
+  max-width: 100%;
+  height: 100%;
 
-   ====================================== */
+  transition: all ease 1600ms;
+  transform-style: preserve-3d;
+}
+
+.layers img.mid {
+  width: 320px;
+  left: 20px;
+}
+
+.layers img.top {
+  width: 300px;
+  top: -5px;
+  left: 30px;
+}
+
+.layers img.tippy {
+  width: 280px;
+  top: -150px;
+  left: 40px;
+}
+
+  .layers:hover img {
+    transform:  perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+                translateX(35px) translateY(0px) translateZ(180px);
+  }
+
+  .layers:hover img.mid {
+    transform:  perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+                translateX(35px) translateY(0px) translateZ(240px);
+  }
+
+  .layers:hover img.top {
+    transform:  perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+                translateX(35px) translateY(0px) translateZ(280px);
+  }
+
+  .layers:hover img.tippy {
+    transform:  perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+                translateX(35px) translateY(0px) translateZ(260px);
+  }
